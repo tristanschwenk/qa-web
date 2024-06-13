@@ -32,14 +32,16 @@
       <form class="login-form" action="home.html">
         <h1 class="login-wrapper__title">Login</h1>
         <div class="form-group">
-          <label for="email">Email</label>
+          <label for="email">Email (du type mail@exemple.com)</label>
           <input type="email" id="email" autofocus autocomplete="username" class="form-control"
             placeholder="Enter your email" required>
         </div>
         <div class="form-group">
-          <label for="password">Password</label>
+          <label for="password">Password (longueur minimale de 12 caractères)</label>
+
           <input type="password" id="password" autocomplete="current-password" class="form-control"
             placeholder="Enter your password" required minlength="12">
+          <button id="show-password">👁️</button>
         </div>
         <button type="submit" class="bg-blue-700 hover:bg-blue-800 focus:outline-blue-600">Log in</button>
       </form>
@@ -52,3 +54,20 @@
     <p>© 2024 All rights reserved.</p>
   </footer>
 </body>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const showPasswordButton = document.getElementById('show-password')
+    const passwordInput = document.getElementById('password')
+
+    showPasswordButton.addEventListener('click', (e) => {
+      e.preventDefault()
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text'
+      } else {
+        passwordInput.type = 'password'
+      }
+    })
+  })
+</script>
