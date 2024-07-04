@@ -53,21 +53,19 @@
     <p>Made with ♡ by Tristan</p>
     <p>© 2024 All rights reserved.</p>
   </footer>
-</body>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const showPasswordButton = document.getElementById('show-password')
+      const passwordInput = document.getElementById('password')
 
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const showPasswordButton = document.getElementById('show-password')
-    const passwordInput = document.getElementById('password')
-
-    showPasswordButton.addEventListener('click', (e) => {
-      e.preventDefault()
-      if (passwordInput.type === 'password') {
-        passwordInput.type = 'text'
-      } else {
-        passwordInput.type = 'password'
-      }
+      showPasswordButton.addEventListener('click', (e) => {
+        e.preventDefault()
+        if (passwordInput.type === 'password') {
+          passwordInput.type = 'text'
+        } else {
+          passwordInput.type = 'password'
+        }
+      })
     })
-  })
-</script>
+  </script>
+</body>
