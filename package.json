@@ -6,7 +6,7 @@
   "author": "Tristan264 <tristan.bschwenk@icloud.com>",
   "scripts": {
     "dev": "gulp watch",
-    "tailwind": "npx tailwindcss -i ./src/assets/sass/tailwind.css -o ./src/assets/tailwind.css --watch"
+    "tailwind": "npx tailwindcss -i ./assets/tailwind-input.css -o ./assets/tailwind.css --watch"
   },
   "license": "MIT",
   "dependencies": {
